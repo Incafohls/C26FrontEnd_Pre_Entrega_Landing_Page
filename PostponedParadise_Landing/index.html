@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- BARRA SUPERIOR -->
+       <div>
+        <!-- LOGO SECTION -->
+        <div><h1>Postponed Paradise</h1></div>
+        
+        <!-- MENU -->
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Demo</a></li>
+                    <li><a href="#">Donations</a></li>
+                    <li><a href="#">Credits</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <!-- HERO SECTION (EJE CENTRAL DE LA PAGINA, EYE CATCHER) -->
+
+
+
+        </section>
+
+
+
+
+        <h2>Tester form</h2>
+        <p>Want to help us improve our game? Join the testing team!</p>
+        
+        <form action="" method="post">
+            <fieldset>
+                <p>
+                    <label for="FullName">Full Name:</label>
+                    <input type="text" id="FullName" name="FullName" placeholder="John Doe" minlength="12" maxlength="40" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@megamail.com" required>
+                </p>
+
+                <p>
+                    <label for="BirthDate">Birth Date:</label>
+                    <input type="date" id="BirthDate" name="BirthDate" required>
+                </p>
+
+                <button type="submit">Send Form</button>
+                <button type="reset">Clear Form</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tell us about you!</legend>
+                <select id="testercat" name="testercat" required>
+                    <option value="dev">I'm a game developer</option>
+                    <option value="player">I just play games</option>
+                    <option value="tester">I'm a game tester</option>
+                </select>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Radio Buttons</legend>
+                <input type="radio" id="radio_mail" name="contact_type" value="mail">
+                <label for="radio_mail">E-Mail</label>
+
+                <input type="radio" id="radio_phone" name="contact_type" value="phone">
+                <label for="radio_phone">E-Mail</label>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
