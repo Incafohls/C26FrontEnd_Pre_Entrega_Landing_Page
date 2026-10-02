@@ -1,89 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Postponed Paradise</title>
+
+    <!-- Fuente del logo (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <!-- BARRA SUPERIOR -->
-       <div>
-        <!-- LOGO SECTION -->
-        <div><h1>Postponed Paradise</h1></div>
-        
-        <!-- MENU -->
+
+    <!-- ========== ENCABEZADO: LOGO + MENÚ ========== -->
+    <header class="navbar">
+        <div class="contenedor flex">
+            <h1>Postponed Paradise</h1>
+
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Demo</a></li>
-                    <li><a href="#">Donations</a></li>
-                    <li><a href="#">Credits</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#juego">El juego</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#testers">Testers</a></li>
                 </ul>
             </nav>
-
-
         </div>
     </header>
 
-    <main>
-        <section>
-            <!-- HERO SECTION (EJE CENTRAL DE LA PAGINA, EYE CATCHER) -->
 
+    <main class="contenedor">
 
-
+        <!-- ========== HERO: PRIMERA IMPRESIÓN ========== -->
+        <section id="inicio" class="hero">
+            <h2>Una frase corta que enganche al jugador</h2>
+            <p>Una o dos líneas que resuman de qué trata el juego.</p>
+            <a href="#testers" class="btn">Quiero probarlo</a>
         </section>
 
 
+        <!-- ========== SOBRE EL JUEGO ========== -->
+        <section id="juego">
+            <h2>El juego</h2>
+            <p>Acá va la historia o la propuesta del juego: dónde transcurre, quién es el protagonista y qué tiene que hacer.</p>
+            <p>Un segundo párrafo con lo que lo hace distinto: mecánicas, estilo visual o ambientación.</p>
+        </section>
 
 
-        <h2>Tester form</h2>
-        <p>Want to help us improve our game? Join the testing team!</p>
-        
-        <form action="" method="post">
-            <fieldset>
-                <p>
-                    <label for="FullName">Full Name:</label>
-                    <input type="text" id="FullName" name="FullName" placeholder="John Doe" minlength="12" maxlength="40" required>
-                </p>
+        <!-- ========== GALERÍA DE CAPTURAS ========== -->
+        <!-- Guardá las imágenes en la carpeta img/ con estos nombres -->
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="flex galeria">
+                <img src="img/leader_selection_preview.gif" alt="Selección de Recompensas">
+                <img src="img/skill_selection_preview.gif" alt="Captura del juego 2">
+                <img src="img/fusion_options_preview_archer_elf.gif" alt="Captura del juego 3">
+            </div>
+        </section>
 
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="johndoe@megamail.com" required>
-                </p>
 
-                <p>
-                    <label for="BirthDate">Birth Date:</label>
-                    <input type="date" id="BirthDate" name="BirthDate" required>
-                </p>
+        <!-- ========== FORMULARIO DE TESTERS (FORMSPREE) ========== -->
+        <section id="testers">
+            <h2>Sumate como tester</h2>
+            <p>¿Querés ayudarnos a desarrollar y mejorar el juego? Dejanos tus datos.</p>
 
-                <button type="submit">Send Form</button>
-                <button type="reset">Clear Form</button>
-            </fieldset>
+            <form action="https://formspree.io/f/mnpnwgwz" method="POST">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
 
-            <fieldset>
-                <legend>Tell us about you!</legend>
-                <select id="testercat" name="testercat" required>
-                    <option value="dev">I'm a game developer</option>
-                    <option value="player">I just play games</option>
-                    <option value="tester">I'm a game tester</option>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+
+                <label for="perfil">¿Qué te describe mejor?</label>
+                <select id="perfil" name="perfil">
+                    <option value="jugador">Juego por diversión</option>
+                    <option value="desarrollador">Desarrollo juegos</option>
+                    <option value="tester">Soy tester</option>
                 </select>
-            </fieldset>
-        
-            <fieldset>
-                <legend>Radio Buttons</legend>
-                <input type="radio" id="radio_mail" name="contact_type" value="mail">
-                <label for="radio_mail">E-Mail</label>
 
-                <input type="radio" id="radio_phone" name="contact_type" value="phone">
-                <label for="radio_phone">E-Mail</label>
-            </fieldset>
-        </form>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos algo sobre vos"></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+
     </main>
 
-    <footer>
 
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <p>&copy; 2026 Postponed Paradise</p>
+        <p>Monkeyfohls Game Studio</p>
     </footer>
+
 </body>
 </html>

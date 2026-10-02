@@ -1,0 +1,200 @@
+/* =========================================
+   POSTPONED PARADISE - Estilos
+   Color principal: #283e61
+   ========================================= */
+
+
+/* ---------- Base ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2933;
+    background-color: #eef2f8;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    color: #283e61;
+}
+
+
+/* ---------- Contenedores ---------- */
+
+/* Centra el contenido y limita el ancho */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Pone los elementos en fila, separados y centrados verticalmente */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* ---------- Navegador ---------- */
+
+.navbar {
+    background-color: #283e61;
+    color: #ffffff;
+    padding: 16px 0;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #f2a541;
+}
+
+
+/* ---------- Botones ---------- */
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 24px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #283e61;
+    border: 2px solid #283e61;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3d5a8a;
+}
+
+/* Variante: solo borde */
+.btn-secundario {
+    color: #283e61;
+    background-color: transparent;
+}
+
+.btn-secundario:hover {
+    color: #ffffff;
+    background-color: #283e61;
+}
+
+
+/* ---------- Secciones ---------- */
+
+section {
+    padding: 48px 0;
+}
+
+.galeria img {
+    width: 32%;
+    border-radius: 8px;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+    /* Misma proporción que el gif (800 x 451) para que se vea entero */
+    aspect-ratio: 800 / 451;
+
+    /* Centra el contenido horizontal y verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+
+    /* Imagen o gif de fondo (reemplazar por el archivo real en img/) */
+    background-image: url("../img/combat_start_preview.gif");
+    background-size: cover;
+    background-position: center;
+
+
+    /* Bordes redondeados y separación del menú */
+    border-radius: 8px;
+    margin-top: 24px;
+}
+
+.hero h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+/* Botón naranja para que resalte sobre el fondo azul */
+.hero .btn {
+    background-color: #f2a541;
+    border-color: #f2a541;
+    color: #1b2a42;
+}
+
+
+/* ---------- Formulario ---------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 500px;
+    margin-top: 16px;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+    font: inherit;
+    border: 1px solid #283e61;
+    border-radius: 8px;
+}
+
+
+/* ---------- Pie de página ---------- */
+
+footer {
+    background-color: #283e61;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 0;
+}
+
+
+/* ---------- Celulares ---------- */
+
+@media (max-width: 768px) {
+    .flex,
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .galeria img {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}
