@@ -53,6 +53,7 @@ h2 {
     background-color: #283e61;
     color: #ffffff;
     padding: 16px 0;
+    
 }
 
 .navbar ul {
@@ -108,17 +109,37 @@ section {
     padding: 48px 0;
 }
 
+#galeria {
+    text-align: center;          
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;            
+    justify-content: center;     
+    gap: 16px;
+    margin-top: 24px;
+}
+
 .galeria img {
-    width: 32%;
+    max-width: 32%;             
     border-radius: 8px;
+}
+
+#juego{
+    text-align: center;
 }
 
 
 /* ---------- Hero ---------- */
 
 .hero {
-    /* Misma proporción que el gif (800 x 451) para que se vea entero */
+    /* Misma proporción que el gif (800 x 451) */
     aspect-ratio: 800 / 451;
+    /* Gif de fondo */
+    background-image: url("../img/combat_start_preview.gif");
+    background-size: cover;
+    background-position: center;
 
     /* Centra el contenido horizontal y verticalmente */
     display: flex;
@@ -128,35 +149,127 @@ section {
     text-align: center;
     gap: 16px;
 
-    /* Imagen o gif de fondo (reemplazar por el archivo real en img/) */
-    background-image: url("../img/combat_start_preview.gif");
-    background-size: cover;
-    background-position: center;
-
-
-    /* Bordes redondeados y separación del menú */
     border-radius: 8px;
     margin-top: 24px;
 }
 
 .hero h2 {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
     color: #ffffff;
     font-size: 2.5rem;
 }
 
-/* Botón naranja para que resalte sobre el fondo azul */
+
 .hero .btn {
+    background-color: #1b2a42;
+    border-color: #1b2a42;
+    color: #ffffff;
+}
+
+.hero .btn:hover {
     background-color: #f2a541;
     border-color: #f2a541;
     color: #1b2a42;
 }
 
+/* ---------- Reseñas (grid) ---------- */
 
-/* ---------- Formulario ---------- */
+.reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 columnas iguales */
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.caja-reseña {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.reseña p {
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.reseña h3 {
+    color: #283e61;
+    font-size: 1rem;
+}
+
+/* ---------- Productos (cards con flexbox) ---------- */
+
+/* Contenedor de las cards */
+.productos {
+    display: flex;
+    flex-wrap: wrap;          
+    gap: 24px;
+    margin-top: 24px;
+}
+
+#productos h2 {
+    text-align: center;
+}
+
+/* Cada card */
+.card {
+    flex: 1 1 250px;          
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;         /* para que la imagen respete las esquinas redondeadas */
+    box-shadow: 0 2px 8px rgba(40, 62, 97, 0.15);
+}
+
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;        
+}
+
+
+.card-contenido {
+    flex: 1;                  
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+.card h3 {
+    color: #283e61;
+}
+
+.precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #283e61;
+}
+
+/* Empuja el botón al fondo de la card */
+.card .btn {
+    margin-top: auto;
+    text-align: center;
+}
+
+
+
+
+/* ---------- Formulario (Contacto) ---------- */
+
+#testers {
+    max-width: 500px;
+    margin: 0 auto;      
+    text-align: center;  
+}
 
 form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 8px;
     max-width: 500px;
     margin-top: 16px;
@@ -190,11 +303,14 @@ footer {
         flex-direction: column;
     }
 
-    .galeria img {
-        width: 100%;
-    }
-
     .hero h2 {
         font-size: 1.8rem;
     }
+
+    .resenas-grid {
+        grid-template-columns: 1fr;   /* en celular, una sola columna */
+    }
+
+
 }
+
