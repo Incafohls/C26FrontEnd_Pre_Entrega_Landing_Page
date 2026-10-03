@@ -110,6 +110,7 @@ section {
 }
 
 #galeria {
+    font-family: "Fugaz One", sans-serif;
     text-align: center;          
 }
 
@@ -127,6 +128,7 @@ section {
 }
 
 #juego{
+    font-family: "Fugaz One", sans-serif;
     text-align: center;
 }
 
@@ -175,6 +177,11 @@ section {
 
 /* ---------- Reseñas (grid) ---------- */
 
+#reseñas h2{
+    font-family: "Fugaz One", sans-serif;
+    text-align: center;
+}
+
 .reseñas-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);   /* 3 columnas iguales */
@@ -200,7 +207,7 @@ section {
 
 /* ---------- Productos (cards con flexbox) ---------- */
 
-/* Contenedor de las cards */
+/* Contenedor de las cards, no selector de id */
 .productos {
     display: flex;
     flex-wrap: wrap;          
@@ -209,6 +216,7 @@ section {
 }
 
 #productos h2 {
+    font-family: "Fugaz One", sans-serif;
     text-align: center;
 }
 
@@ -227,7 +235,7 @@ section {
 .card img {
     width: 100%;
     aspect-ratio: 16 / 9;
-    object-fit: cover;        
+    object-fit: contain;        
 }
 
 
@@ -265,6 +273,11 @@ section {
     margin: 0 auto;      
     text-align: center;  
 }
+
+#testers h2{
+    font-family: "Fugaz One", sans-serif;
+}
+
 
 form {
     display: flex;
